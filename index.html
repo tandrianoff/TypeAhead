@@ -1,0 +1,77 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="type_ahead.css">
+
+	<!-- 
+		This styling is to demonstrate how to override the default styles for the Type Aheads
+	-->
+	<style type="text/css">
+
+		body {
+			font-family: "Helvetica Neue", Helvetica,sans-serif;
+			background-color: #E8D7B7;
+		}
+
+		#typeAhead2 .taResultList {
+			width: 500px;
+			border-color: #B3FFDF;
+		}
+
+		#typeAhead2 .even_color {
+			background-color: #fff;
+		}
+
+		#typeAhead2 .odd_color {
+			background-color: #FFF1B3;
+		}
+
+		#typeAhead2 .highlight_color {
+			background-color: #B3FFDF;
+		}
+
+		#typeAhead2 .typeAheadSearch {
+			background-color: #000;
+			color: #fff;
+		}
+
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script type="text/javascript" src="SFUtil.js"></script>
+	<script type="text/javascript" src="TypeAhead.js"></script>
+	<script type="text/javascript">
+	
+	var init = function() {
+		// address for api
+		var api = 'http://app.shoefitr.com/api/Brand/Filter'+'?sid=' + Math.random()+'&apiKey=A53F506FDF583ABB4BE84B2962F4B8A2&filter=';
+		
+		// create type ahead with custom parameters
+		var typeAhead2 = new TypeAhead('typeAhead1',api);
+		typeAhead2.maxResults = 6;
+		typeAhead2.minQueryLength = 2;
+		typeAhead2.emptyListMessage = "Nada, zip, zilch.";
+
+		//create default type ahead
+		var typeAhead1 = new TypeAhead('typeAhead2',api);
+	};
+	</script>
+</head>
+
+<body onload="init();" style="margin-left:100px; margin-top: 50px;'">
+	<h1> Type Ahead Demo </h1>
+	<h2>Choose a Brand</h2>
+	<div class="typeAhead" id="typeAhead1">
+		<input type="text" id="searchBox1" class="typeAheadSearch"/>
+	</div>
+	<p style="width: 640px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan libero non lacus venenatis blandit. Mauris sed eros a velit eleifend porta eu quis nibh. Sed sed venenatis augue. Praesent ultrices tincidunt pellentesque. Aenean porttitor augue sit amet dolor venenatis sed bibendum odio bibendum. Quisque quis elit eu ipsum porttitor elementum ac a tortor. Duis eu augue felis, et dictum lorem. Ut ac arcu lectus. In hac habitasse platea dictumst. Donec dictum sem sit amet est viverra at volutpat augue rhoncus.
+	</p>
+
+	<h2>Choose another Brand</h2>
+	<div class="typeAhead" id="typeAhead2">
+		<input type="text" id="searchBox2" class="typeAheadSearch"/>
+	</div>
+	<p style="width: 640px;">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan libero non lacus venenatis blandit. Mauris sed eros a velit eleifend porta eu quis nibh. Sed sed venenatis augue. Praesent ultrices tincidunt pellentesque. Aenean porttitor augue sit amet dolor venenatis sed bibendum odio bibendum. Quisque quis elit eu ipsum porttitor elementum ac a tortor. Duis eu augue felis, et dictum lorem. Ut ac arcu lectus. In hac habitasse platea dictumst. Donec dictum sem sit amet est viverra at volutpat augue rhoncus.
+	</p>
+</body>
+</html>

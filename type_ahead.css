@@ -1,0 +1,103 @@
+/**
+ * @author Tim Andrianoff
+ * @date September 28, 2012
+ *
+ *	This stylesheet contains the default styles for use with TypeAhead.js,
+ *	and also serves to catalogue the different html classes available to 
+ *	override to change the styling of the type ahead.
+ */
+
+/**
+ * Keep relative positioning for the .typeAhead div
+ * so that the absolutely positioned result list
+ * displays correctly.
+ */
+.typeAhead {
+	position: relative;
+}
+
+/**
+ *	Styling for the search box used for the type ahead.
+ */
+.typeAheadSearch {
+	height: 30 px;
+	font-family: Helvetica,sans-serif;
+	font-size: 12pt;
+}
+
+/**
+ *	List of completions for the type ahead query.
+ *  The value of top should equal the height of 
+ *  .typeAheadSearch. Position should be absolute.
+ */
+.taResultList {
+	top:30 px;
+	position: absolute;
+	list-style: none;
+	margin-top: 0px;
+	padding-left: 0px;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #fff;
+	width: 300px;
+	display: none;
+	font-family: Helvetica,sans-serif;
+	z-index: 4000;
+}
+
+/**
+ *	A result returnd by the api
+ */
+.resultItem {
+	border-top-style: solid;
+	border-top-width: 1px;
+	padding: 5px;
+}
+
+/**
+ *	Style for message shown when no results are found.
+ */
+.empty_message {
+	border-top-width: 1px;
+	padding: 5px;
+	color: #f00;
+}
+
+/*** coloring for results ***/
+
+/**
+ * Coloring for odd numbered rows in the type ahead result list 
+ */
+.odd_color {
+	background-color: #ccc;
+}
+
+/**
+ * Coloring for even numbered rows in the type ahead result list 
+ */
+.even_color {
+	background-color: #fff;
+}
+
+/**
+ *	Color of selected item
+ */
+.highlight_color {
+	background-color: #00ffff;
+}
+
+/**
+ *	Style for the main value of a type ahead result.
+ *	Unused now, but here for completeness.
+ */
+.resultValue {
+
+}
+
+/**
+ *	Style for the column containing an image
+ *  shown with the resultValue
+ */
+td.resultImage {
+	width:50px;
+}
